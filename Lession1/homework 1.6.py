@@ -5,3 +5,4 @@ while a < b:
     day = day+1
     a += (a * 0.1)
 print(day)
+
