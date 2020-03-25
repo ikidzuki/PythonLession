@@ -1,10 +1,16 @@
-quit = None
-input_list = []
-while quit != "Q":
-    input_list = (input("Введите числа через пробел: ").split()
-    for i in input_list:
-        input_list[]
+def sum_list():
+    qt = None
+    sum_num = 0
+    while qt != "Q":
+        input_list = []
+        for i in input("Для выхода введите 'Q'.Введите числа через пробел: ").split():
+            if i.upper() == "Q":
+                qt = "Q"
+                break  # Позволяет не включать в сумму цифры после "Q"
+            else:
+                input_list.append(int(i))
+        sum_num += sum(input_list)
+        print(sum_num)
 
-    input_sum = 1
-    print(f"Сумма введенных чисел - {input_sum}")
-    print(input_list)
+
+sum_list()
